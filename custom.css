@@ -1,0 +1,99 @@
+body{
+
+  background-color: black ;
+  color: #FF3939 ;
+/*    font-family: "Aguafina Script";  */
+  font-family: "Lato";
+  /* made by Łukasz Dziedzic */
+}
+
+
+h1 {
+         font-family: "Aguafina Script";
+/*   made by Sudtipos */
+      }
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: red;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 28%;
+}
+
+.title {
+  font-size: 100px;
+  color: #FBF7F7;
+}
+
+
+.title-holder1 {
+  padding: 0px;
+  margin: auto;
+  text-align: center;
+  width: 60%;
+}
+
+{
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 105px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row {
+  margin: auto;
+  padding: auto;
+}
+
+.desc{
+  color: white;
+
+}
+
+.text1{
+  color: white;
+  margin: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  color: white;
+}

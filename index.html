@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
+		<script src="https://code.createjs.com/1.0.0/tweenjs.min.js"></script> -->
+  	<script src="star.js"></script>
+	<script src="easeljs-NEXT.js"></script>
+<link rel="stylesheet" href="custom.css" />
+<div class="links"> <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="space.html">Shooting Star</a></li>
+<li><a href="statement.html">Statement</a></li>
+</ul>
+			<script id="editable">
+      var stage;
+    	function init() {
+
+    		// create a new stage and point it at our canvas:
+    		stage = new createjs.Stage(document.getElementById("testCanvas"));
+
+    		// Define a spritesheet. Note that this data was exported by Zoë.
+    		var spriteSheet = new createjs.SpriteSheet({
+    				framerate: 30,
+
+    				"images": ["../images/ss1.png"],
+
+    				"frames": {"regX": 652, "height": 550, "count": 64, "regY": 50, "width": 650},
+    				// define two animations, run (loops, 1.5x speed) and jump (returns to run):
+    				"animations": {
+    					"run": [0, 25, "run", 1.5],
+    					"jump": [10, 3, "run"]
+    				}
+    			});
+
+    		// Events from SpriteSheet (not required for the demo)
+    		spriteSheet.on("complete", function(event) {
+    			console.log("Complete", event);
+    		});
+    		spriteSheet.on("error", function(event) {
+    			console.log("Error", event);
+    		});
+
+    		var grant = new createjs.Sprite(spriteSheet, "run");
+    		grant.x = 1600;
+    		grant.y = 22;
+
+    		// Add Grant to the stage, and add it as a listener to Ticker to get updates each frame.
+    		stage.addChild(grant);
+    		createjs.Ticker.timingMode = createjs.Ticker.RAF;
+    		createjs.Ticker.addEventListener("tick", stage);
+    	}
+// 	        function init() {
+// 	          var stage = new createjs.Stage("demoCanvas");
+// 						var circle = new createjs.Shape();
+// circle.graphics.beginFill("red").drawCircle(0, 0, 90);
+// circle.x = 4000;
+// circle.y = 500;
+// stage.addChild(circle);
+// createjs.Tween.get(circle, { loop: true })
+//   .to({ x: 1500 }, 1000, createjs.Ease.getPowInOut(4))
+//   .to({ alpha: 0, y: 175 }, 500, createjs.Ease.getPowInOut(8))
+//   .to({ alpha: 0, y: 125 }, 500)
+//   .to({ alpha: 1, y: 100 }, 500, createjs.Ease.getPowInOut(2))
+//   .to({ x: 100 }, 800, createjs.Ease.getPowInOut(2));
+//   createjs.Ticker.setFPS(60);
+// createjs.Ticker.addEventListener("tick", stage);
+// 	        }
+	    </script>
+
+
+
+
+    <title>SS</title>
+
+
+  <body onload="init();">
+
+
+
+
+
+
+  <!-- <div class="title-holder1">
+    <h1 class="title">Shooting Star</h1> -->
+          <!-- Check out the function in script.js to see how it works -->
+  <!-- <div class="links"> <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="space.html">Shooting Star</a></li>
+</ul>
+</div>
+    </div>
+		<! <div class="center">
+		<a href="space.html">
+		<img src="/images/ss1.png" width="800" height="800">
+    <div>
+    	<canvas id="testCanvas" width="960" height="400"></canvas>
+    </div> -->
+    <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
+    <div>
+    	<canvas id="testCanvas" width="2000" height="400"></canvas>
+    </div>
+  </body>
+</html>
